@@ -1,0 +1,143 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>FCC Drum Machine</title>
+      <script>
+        function play(str) {
+
+        if (str === "q" || str === "Q"){
+            document.getElementById('display').innerHTML = "crash";
+
+          } else if (str === "w" || str ==="W"){
+            document.getElementById('display').innerHTML = "hihat2";
+
+          } else if (str === "e" || str === "E"){
+            document.getElementById('display').innerHTML = "kick1";
+
+          } else if (str === "a" || str === "A"){
+            document.getElementById('display').innerHTML = "kick2";
+
+          } else if (str === "s" || str === "S"){
+            document.getElementById('display').innerHTML = "openhat";
+
+          } else if (str === "d" || str === "D"){
+            document.getElementById('display').innerHTML = "ride2";
+
+          } else if (str === "z" || str === "Z"){
+            document.getElementById('display').innerHTML = "snare1";
+
+          } else if (str === "x" || str === "X"){
+            document.getElementById('display').innerHTML = "tom1";
+
+          } else if (str === "c" || str === "C"){
+            document.getElementById('display').innerHTML = "tom2";
+          }
+
+
+        var audio = document.getElementById(str);
+        audio.play();
+        }
+
+        window.document.onkeyup = function (event){
+          let keystroke = event.key
+          if (keystroke === "q" || keystroke === "Q"){
+            play("Q");
+
+          } else if (keystroke === "w" || keystroke ==="W"){
+            play("W");
+
+          } else if (keystroke === "e" || keystroke === "E"){
+            play("E");
+
+          } else if (keystroke === "a" || keystroke === "A"){
+            play("A");
+
+          } else if (keystroke === "s" || keystroke === "S"){
+            play("S");
+
+          } else if (keystroke === "d" || keystroke === "D"){
+            play("D");
+
+          } else if (keystroke === "z" || keystroke === "Z"){
+            play("Z");
+
+          } else if (keystroke === "x" || keystroke === "X"){
+            play("X");
+
+          } else if (keystroke === "c" || keystroke === "C"){
+            play("C");
+          }
+        }
+    </script>
+
+    </head>
+
+    <body>
+      <div class="container" id="drum-machine">
+        <h1 class = "text-center">FCC drum Machine</h1>
+        <div class = "card my-3">
+            <div class = "card-body">
+              <div class = "text-center" id="display">Nothing to display yet</div>
+            </div>
+        </div>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-q" onclick="play('Q')">
+        Q
+          <audio src="./clip/q-crash-acoustic.wav" class="clip" id="Q"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-w" onclick="play('W')">
+        W
+          <audio src="./clip/w-hihat-acoustic02.wav" class="clip" id="W"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-e" onclick="play('E')">
+        E
+          <audio src="./clip/e-kick-acoustic01.wav" class="clip" id="E"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-a" onclick="play('A')">
+        A
+          <audio src="./clip/a-kick-acoustic02.wav" class="clip" id="A"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-s" onclick="play('S')">
+        S
+          <audio src="./clip/s-openhat-acoustic01.wav" class="clip" id="S"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-d" onclick="play('D')">
+        D
+          <audio src="./clip/d-ride-acoustic02.wav" class="clip" id="D"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-z" onclick="play('Z')">
+        Z
+          <audio src="./clip/z-snare-acoustic01.wav" class="clip" id="Z"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-x" onclick="play('X')">
+        X
+          <audio src="./clip/x-tom-acoustic01.wav" class="clip" id="X"></audio>
+        </button>
+
+          <button class="drum-pad btn btn-block btn-primary"  id="drum-c" onclick="play('C')">
+        C
+          <audio src="./clip/c-tom-acoustic02.wav" class="clip" id="C"></audio>
+        </button>
+
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
